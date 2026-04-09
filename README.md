@@ -2,15 +2,15 @@
 
 Compra Certa is a web app for managing grocery purchases, products, and categories. It focuses on a fast workflow to register purchases with multiple items and track monthly totals.
 
-## Tecnologias
+## Technologies
 
 - Frontend: Nuxt 3, Vue 3, TypeScript, Tailwind CSS
 - Backend: Go (Gin), GORM, PostgreSQL
-- Infra local: Docker Compose
+- Local infra: Docker Compose
 
-## Como rodar localmente
+## Running locally
 
-### 1) Backend + banco (Docker)
+### 1) Backend + database (Docker)
 
 ```bash
 docker compose up -d --build
@@ -29,9 +29,9 @@ npm run dev
 
 - App: http://localhost:3000
 
-## Scripts do backend (versao da API)
+## Backend scripts (API version)
 
-No backend, a versao da API e injetada no build via ldflags.
+In the backend, the API version is injected at build time via ldflags.
 
 ```bash
 cd apps/api
@@ -39,15 +39,15 @@ make build VERSION=v1.2.3
 make run VERSION=v1.2.3
 ```
 
-Se nao informar `VERSION`, o padrao e `v1`.
+If you do not provide `VERSION`, the default is `v1`.
 
-## Estrutura do projeto
+## Project structure
 
-- apps/api: API em Go
-- apps/web: frontend Nuxt
-- docker-compose.yml: infraestrutura local (API + Postgres)
+- apps/api: Go API
+- apps/web: Nuxt frontend
+- docker-compose.yml: local infra (API + Postgres)
 
-## Notas
+## Notes
 
-- O endpoint `/api` retorna a versao atual do backend.
-- As rotas da API estao disponiveis sem prefixo e com prefixo de versao (ex.: `/api/v1`).
+- The `/api` endpoint returns the current backend version.
+- API routes are available without a prefix and with a version prefix (e.g. `/api/v1`).
