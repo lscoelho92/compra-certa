@@ -45,7 +45,7 @@
 
       <div class="grid lg:grid-cols-3 gap-6">
         <div
-          class="lg:col-span-2 bg-white rounded-2xl p-5"
+          class="lg:col-span-2 bg-white rounded-2xl p-5 self-start"
           style="box-shadow: 0 4px 20px rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.15);"
         >
           <h2 class="text-base font-semibold mb-4">Quantidade por Produto</h2>
